@@ -1,0 +1,57 @@
+@import url(colors.css);
+
+:root {
+  --border-radius: 0px;
+  --cc-bg: transparent;
+  --widget-background: @window_bg_color;
+  --noti-bg-alpha: 1;
+
+  --padding: calc(var(--border-radius) / 2);
+}
+
+.control-center {
+  border-radius: 0;
+}
+
+.widgets > .widget,
+.widget-mpris > carouselindicatordots,
+.widget-mpris > box > button {
+  background: @window_bg_color;
+  border-radius: var(--border-radius);
+  padding: calc(var(--border-radius) / 2);
+  border: var(--border);
+}
+
+.control-center-list-placeholder {
+  padding: var(--border-radius);
+}
+
+.notification-group {
+  border-radius: var(--border-radius);
+}
+
+.widget.widget-mpris {
+  background: @window_bg_color;
+  border-radius: 0;
+  padding: 0;
+  border: none;
+}
+.widget.widget-mpris > carouselindicatordots {
+  --dots-padding: 4px;
+  padding: var(--dots-padding);
+  padding-left: var(--dots-padding);
+  padding-right: calc(6px + var(--dots-padding));
+  margin: 0;
+  margin-top: var(--padding);
+}
+.widget-mpris > box > button:hover {
+  background: @window_bg_color;
+}
+.widget-mpris-player {
+  box-shadow: none;
+  border: var(--border);
+  margin: 0 var(--padding);
+}
+.widget-mpris-player:only-child {
+  margin: 0;
+}
